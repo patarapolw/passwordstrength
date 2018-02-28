@@ -116,6 +116,21 @@ class PasswordStrength:
 
         return self._rule_scores
 
+    def rating(self):
+        score = self.strength()
+        if score in range(0, 20):
+            return "Very Weak"
+        elif score in range(20, 40):
+            return "Weak"
+        elif score in range(40, 60):
+            return "Good"
+        elif score in range(60, 80):
+            return "Strong"
+        elif score >= 80:
+            return "Very Strong"
+        else:
+            raise ValueError('Value error')
+
     class Additions:
         def __init__(self, password):
             self.password = password
@@ -186,18 +201,6 @@ class PasswordStrength:
                 return 0
 
         def nRepCharBonus(self):
-            # nRepChar = 0
-            # nRepInc = 0
-            # for a, char_a in enumerate(self.password):
-            #     bCharExists = False
-            #     for b, char_b in enumerate(self.password):
-            #         if char_a == char_b and a != b:
-            #             bCharExists = True
-            #             nRepInc = abs(len(self.password)/(b-a))
-            #     if bCharExists:
-            #         nRepChar += 1
-            #         nUnqChar = len(self.password) - nRepChar
-            #         nRepInc = nUnqChar if math.ceil(nRepInc/nUnqChar) else math.ceil(nRepInc)
             nRepInc = 0
             temp_char = ''
             for char in sorted(self.password):
