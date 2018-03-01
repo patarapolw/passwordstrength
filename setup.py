@@ -6,6 +6,6 @@ setup(name='passwordstrength',
       author='Pacharapol Withayasakpunt',
       author_email='patarapolw@gmail.com',
       license='MIT',
-      keywords='password passwordstrength passwordmeter',
+      keywords='password password_strength password_meter',
       packages=['passwordstrength'],
       )
