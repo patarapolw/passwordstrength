@@ -1,7 +1,28 @@
 # PasswordStrength
+
 Editable password strength calculator for Python.
 
 Update: Add entropy module!
+
+## Entropy
+
+This calculates the ability to tolerate dictionary attack. Probably, an entropy of 2**50 is needed for typical cases.
+
+```pycon
+>>> from passwordstrength.entropy import Entropy
+>>> import math
+>>> entropy = Entropy()
+>>> math.log2(entropy.entropy('asdhaskj'))
+39.603517745128734
+>>> math.log2(entropy.entropy('hello'))
+11.240195053979924
+>>> math.log2(entropy.entropy('helloworld'))
+49.00439718141092
+>>> math.log2(entropy.entropy('@sdhaskj'))
+41.54693421676237
+>>> math.log2(entropy.entropy('@sQsA$!j'))
+48.43376716002963
+```
 
 ## Password Meter
 
@@ -30,24 +51,4 @@ This is based on http://www.passwordmeter.com
   'nSeqAlphaBonus': 0,
   'nSeqNumberBonus': 0,
   'nSeqSymbolBonus': 0}}
-```
-
-## Entropy
-
-This calculates the ability to tolerate dictionary attack. Probably, an entropy of 2**50 is needed for typical cases.
-
-```pycon
->>> from passwordstrength.entropy import Entropy
->>> import math
->>> entropy = Entropy()
->>> math.log2(entropy.entropy('asdhaskj'))
-39.603517745128734
->>> math.log2(entropy.entropy('hello'))
-11.240195053979924
->>> math.log2(entropy.entropy('helloworld'))
-49.00439718141092
->>> math.log2(entropy.entropy('@sdhaskj'))
-41.54693421676237
->>> math.log2(entropy.entropy('@sQsA$!j'))
-48.43376716002963
 ```
