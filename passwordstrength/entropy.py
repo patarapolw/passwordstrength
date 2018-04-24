@@ -79,6 +79,7 @@ class Entropy:
             elif password[start_word:i+1] in self.dictionary_words:
                 word = password[start_word:i + 1]
                 entropy *= self.word_difficulty(word)*len(self.dictionary_words)
+                start_word = i+1
         if start_word < len(password):
             entropy *= self.entropy_brute_force(password[start_word:])
 
