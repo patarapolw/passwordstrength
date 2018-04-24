@@ -6,7 +6,7 @@ Update: Add entropy module!
 
 ## Entropy
 
-This calculates the ability to tolerate dictionary attack. Probably, an entropy of [2\*\*70](https://pthree.org/2018/04/19/use-a-good-password-generator/) is needed for typical cases.
+This calculates the ability to tolerate dictionary attack. Probably, an entropy of [2\*\*70](https://pthree.org/2018/04/19/use-a-good-password-generator/) is eventually needed.
 
 ```pycon
 >>> from passwordstrength.entropy import Entropy
