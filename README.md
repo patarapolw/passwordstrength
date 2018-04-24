@@ -34,7 +34,7 @@ This is based on http://www.passwordmeter.com
 
 ## Entropy
 
-This calculates the ability to tolerate dictionary attack.
+This calculates the ability to tolerate dictionary attack. Probably, an entropy of 2**50 is needed for typical cases.
 
 ```pycon
 >>> from passwordstrength.entropy import Entropy
@@ -43,7 +43,9 @@ This calculates the ability to tolerate dictionary attack.
 >>> math.log2(entropy.entropy_non_word('asdhaskj'))
 39.603517745128734
 >>> math.log2(entropy.entropy_word_list(['hello', 'World']))
-39.78991097025491
+27.575424759098897
 >>> math.log2(entropy.entropy_non_word('@sdhaskj'))
 41.54693421676237
+>>> math.log2(entropy.entropy_non_word('@sQsA$!j'))
+48.43376716002963
 ```

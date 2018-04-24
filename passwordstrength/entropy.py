@@ -39,6 +39,8 @@ class Entropy:
         for word in keyword_list:
             if word in self.common_words:
                 entropy *= len(self.common_words)
+            elif word.lower() in self.common_words:
+                entropy *= 2*len(self.common_words)
             elif word in self.dictionary_words:
                 entropy *= len(self.dictionary_words)
             else:
