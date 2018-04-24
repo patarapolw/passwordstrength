@@ -63,7 +63,7 @@ class Entropy:
         else:
             difficulty = 1
             for char in word:
-                difficulty *= 2 + len(self.leet.get(char, 0))
+                difficulty *= 2 + len(self.leet.get(char, []))
             return difficulty
 
     def entropy_diceware(self, password):
@@ -87,6 +87,9 @@ class Entropy:
 
     def entropy(self, password):
         return self.entropy_worst_case(password)
+
+    def log_entropy(self, password):
+        return math.log2(self.entropy(password))
 
     def entropy_worst_case(self, password):
         return min(self.entropy_brute_force(password),
