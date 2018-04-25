@@ -14,6 +14,8 @@ setup(
     },
     include_package_data=True,
     extras_require={
-        'analysis': ['randomsentence', 'pronounceable', 'memorable_password']
+        'analysis': ['git+https://github.com/patarapolw/randomsentence.git',
+                     'git+https://github.com/patarapolw/pronounceable.git',
+                     'git+https://github.com/patarapolw/memorable-password.git']
     }
 )
