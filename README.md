@@ -1,5 +1,7 @@
 # PasswordStrength
 
+[![Build Status](https://travis-ci.org/patarapolw/passwordstrength.svg?branch=master)](https://travis-ci.org/patarapolw/passwordstrength)
+
 Editable password strength calculator for Python.
 
 Update: Add entropy module!
