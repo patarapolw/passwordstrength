@@ -9,6 +9,7 @@ setup(
     license='MIT',
     keywords='password password_strength password_meter',
     packages=['passwordstrength'],
+    install_requires=['PyYAML'],
     package_data={
         'passwordstrength': ['database/*']
     },
