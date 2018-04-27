@@ -11,6 +11,9 @@ pytest = "*"
 randomsentence = {git = "https://github.com/patarapolw/randomsentence.git", editable = true}
 pronounceable = {git = "https://github.com/patarapolw/pronounceable.git", editable = true}
 memorable-password = {git = "https://github.com/patarapolw/memorable-password.git", editable = true}
+setuptools = "*"
+twine = "*"
+wheel = "*"
 
 [requires]
 python_version = "3.6"

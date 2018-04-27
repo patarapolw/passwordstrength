@@ -1,6 +1,10 @@
 # PasswordStrength
 
 [![Build Status](https://travis-ci.org/patarapolw/passwordstrength.svg?branch=master)](https://travis-ci.org/patarapolw/passwordstrength)
+[![Latest Version](https://pypip.in/version/passwordstrength/badge.svg)](https://pypi.python.org/pypi/passwordstrength/)
+[![PyPI license](https://img.shields.io/pypi/l/passwordstrength.svg)](https://pypi.python.org/pypi/passwordstrength/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/passwordstrength.svg)](https://pypi.python.org/pypi/passwordstrength/)
+
 
 Editable password strength calculator for Python.
 
