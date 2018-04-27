@@ -13,9 +13,7 @@ setup(
         'passwordstrength': ['database/*']
     },
     include_package_data=True,
-    extras_require={
-        'analysis': ['git+https://github.com/patarapolw/randomsentence.git',
-                     'git+https://github.com/patarapolw/pronounceable.git',
-                     'git+https://github.com/patarapolw/memorable-password.git']
-    }
+    dependency_links=['git+https://github.com/patarapolw/randomsentence.git#egg=randomsentence',
+                      'git+https://github.com/patarapolw/pronounceable.git#egg=pronounceable',
+                      'git+https://github.com/patarapolw/memorable-password.git#egg=memorable-password']
 )
