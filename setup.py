@@ -10,6 +10,7 @@ setup(
     keywords='password password_strength password_meter',
     packages=['passwordstrength'],
     install_requires=['PyYAML'],
+    python_requires='>=3.5',
     package_data={
         'passwordstrength': ['database/*']
     },
