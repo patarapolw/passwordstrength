@@ -7,8 +7,7 @@ python:
 
 install:
   - "pip install pipenv"
-  - "pipenv install --dev"
+  - "pipenv install"
 
 script:
-  - "pipenv run pytest"
-  - "pipenv run python analysis/analysis_strength.py"
+  - "python setup.py test"
