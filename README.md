@@ -4,9 +4,10 @@
 [![Latest Version](https://pypip.in/version/passwordstrength/badge.svg)](https://pypi.python.org/pypi/passwordstrength/)
 [![PyPI license](https://img.shields.io/pypi/l/passwordstrength.svg)](https://pypi.python.org/pypi/passwordstrength/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/passwordstrength.svg)](https://pypi.python.org/pypi/passwordstrength/)
+[![Examples tested with pytest-readme](http://img.shields.io/badge/readme-tested-brightgreen.svg)](https://github.com/boxed/pytest-readme)
 
 
-Editable password strength calculator for Python.
+A password strength calculator for Python.
 
 Update: Add entropy module!
 
@@ -14,7 +15,7 @@ Update: Add entropy module!
 
 This calculates the ability to tolerate dictionary attack. Probably, an entropy of [2\*\*70](https://pthree.org/2018/04/19/use-a-good-password-generator/) is eventually needed.
 
-```pycon
+```python
 >>> from passwordstrength.entropy import Entropy
 >>> import math
 >>> entropy = Entropy()
@@ -36,25 +37,9 @@ This is based on http://www.passwordmeter.com
 
 ### Usage
 
-```pycon
+```python
 >>> from passwordstrength.passwordmeter import PasswordStrength
 >>> strength = PasswordStrength('password')
 >>> strength.strength()
 9
->>> strength.rule_scores()
-{'Additions': {'nAlphaLCBonus': 0,
-  'nAlphaUCBonus': 0,
-  'nLengthBonus': 32,
-  'nMidCharBonus': 0,
-  'nNumberBonus': 0,
-  'nSymbolBonus': 0},
- 'Deductions': {'nAlphasOnlyBonus': 8,
-  'nConsecAlphaLCBonus': 14,
-  'nConsecAlphaUCBonus': 0,
-  'nConsecNumberBonus': 0,
-  'nNumbersOnlyBonus': 0,
-  'nRepCharBonus': 1,
-  'nSeqAlphaBonus': 0,
-  'nSeqNumberBonus': 0,
-  'nSeqSymbolBonus': 0}}
 ```
